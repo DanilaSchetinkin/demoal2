@@ -1,0 +1,77 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="demoAl.MainWindow"
+        Title="demoAl">
+	<DockPanel>
+		<StackPanel
+			DockPanel.Dock="Top"
+			Spacing="5"
+			HorizontalAlignment="Center"
+			Orientation="Horizontal" 
+			Height="40">
+			<TextBox 
+				x:Name="SearchBox"
+				Width="200">
+			</TextBox>
+
+			<ComboBox
+				VerticalAlignment="Center"
+				Width="100"
+				x:Name="first"></ComboBox>
+
+			<ComboBox
+				VerticalAlignment="Center"
+				Width="100"
+				x:Name="ManufactureBox"></ComboBox>
+			<ComboBox
+				VerticalAlignment="Center"
+				Width="100"
+				x:Name="SortBox">
+				<ComboBoxItem>
+					без сорт.
+				</ComboBoxItem>
+				<ComboBoxItem>
+					убывю
+				</ComboBoxItem>
+				<ComboBoxItem>
+					возрастю
+				</ComboBoxItem>
+			</ComboBox>
+			<TextBlock></TextBlock>
+		</StackPanel>
+		<ListBox x:Name="AgentBox">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<Border
+						BorderBrush="Gray"
+						BorderThickness="1"
+						Padding="5">
+						<StackPanel HorizontalAlignment="Center">
+							<Image
+								Source="{Binding Logo}"
+								Width="100"
+								Height="100">
+								
+							</Image>
+							<TextBlock
+								Text="w"
+								TextWrapping="Wrap"
+								TextAlignment="Center">
+								
+							</TextBlock>
+							<TextBlock
+								TextAlignment="Center">
+								
+							</TextBlock>
+						</StackPanel>
+					</Border>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+			
+		</ListBox>
+		
+	</DockPanel>
+</Window>
